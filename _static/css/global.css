@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* CSS Global - N2e Main Site */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	list-style: none;
+}
+
+body {
+	background-color: #fff;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: .9em;
+	background-color: #E1E1E1;
+}
+
+a:link {
+	color: #333;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #999;
+	text-decoration: none;
+}
+
+a:active {
+	color: #999;
+	text-decoration: none;
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto 0 auto;
+	position: relative;
+	padding: 10px 0 0 0;
+	background-color: #FFF;
+}
+
+
+
+
+/* header - title - nav */
+
+#header {
+	width: 1024px;
+	padding: 20px;
+}
+
+#title {
+	height: 70px;
+	width: 385px;
+}
+
+#title h1 {
+	color: #444;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 13px;
+	margin: -50px 0 0 75px;
+}
+
+#nav {
+	margin: 10px 0 0 470px;
+	padding: 0;
+}
+
+#nav li {
+	display: inline;
+	padding-left: 25px; 
+	font-size: 17px;
+}
+
+
+/* end of header - title - nav */
+
+
+
+
+/* mainContent - clear - heroImage - rotatingContent */
+
+#mainContent {
+	margin: -17px 0 0 0;	
+	width: 1024px;
+	height: auto;
+}
+
+#clear {
+	clear: both;
+}
+
+#heroImage {
+	border-top: 1px solid #111;
+	border-bottom: 1px solid #111;	
+	background: url(../imgs/hero.jpg) top center no-repeat;
+	width: 1024px;
+	height: 630px;
+}
+
+#rotatingContent {
+	margin: -580px 0 0 550px;
+	height: 380px;
+	width: 380px;
+	padding: 30px;
+	background: url(../imgs/transparency.png) no-repeat;
+}
+
+#rotatingContent h2 {
+	font-size: 40px;
+	line-height: 40px;
+	color: #444;
+}
+
+#rotatingContent p {
+	margin-top: 15px;
+	font-size: 18px;
+	color: #444;
+	line-height: 25px;
+}
+
+#rotatingContent a:link {
+	color: #007da1;
+	font-size: 20px;
+}
+
+#rotatingContent a:visited {
+	color: #007da1;
+	font-size: 20px;
+}
+
+#rotatingContent a:hover {
+	color: #999;
+	font-size: 20px;
+}
+
+#rotatingContent a:active {
+	color: #999;
+	font-size: 20px;
+}
+
+/* end of mainContent - rotatingContent */
+
+
+
+
+/* footer - socialIcons - legal */
+
+#footer {
+	width: 1024px;
+	height: 90px;
+	margin-top: 55px;
+	padding-top: 5px;
+	background-color: #999;
+}
+
+#socialIcons {
+	margin: 0 0 0 15px;	
+}
+
+#socialIcons li {
+	display: inline;
+	margin-right: 4px;
+}
+
+#legal {
+	width: 1024px;
+	text-align: center;
+	margin: 45px 0 0 0;
+}
+
+#legal li {
+	display: inline;
+	padding: 0 7px 0 5px;
+	border-right: 2px solid #333;
+	font-size: 16px;
+}
+
+#legal .last {
+	border-right: none;	
+}
+
+#legal a:link {
+	color: #333;	
+}
+
+#legal a:viisited {
+	color: #333;	
+}
+
+#legal a:hover {
+	color: #ccc;	
+}
+
+#legal a:active {
+	color: #ccc;	
+}
+
+/* end of footer - socialIcons - legal */
+
+
