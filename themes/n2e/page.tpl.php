@@ -15,69 +15,38 @@
   <body>
 
 <!-- Layout -->
-  <div id="header"><?php print $header; ?></div>
-
-    <div id="wrapper">
-    <div id="container" class="clear-block">
-
+    <div id="container">
       <div id="header">
-        <div id="logo-floater">
-        <?php
-          // Prepare header
-          $site_fields = array();
-          if ($site_name) {
-            $site_fields[] = check_plain($site_name);
-          }
-          if ($site_slogan) {
-            $site_fields[] = check_plain($site_slogan);
-          }
-          $site_title = implode(' ', $site_fields);
-          if ($site_fields) {
-            $site_fields[0] = '<span>'. $site_fields[0] .'</span>';
-          }
-          $site_html = implode(' ', $site_fields);
-
-          if ($logo || $site_title) {
-            print '<h1><a href="'. check_url($front_page) .'" title="'. $site_title .'">';
-            if ($logo) {
-              print '<img src="'. check_url($logo) .'" alt="'. $site_title .'" id="logo" />';
-            }
-            print $site_html .'</a></h1>';
-          }
-        ?>
-        </div>
-
-        <?php if (isset($primary_links)) : ?>
-          <?php print theme('links', $primary_links, array('class' => 'links primary-links')) ?>
-        <?php endif; ?>
-        <?php if (isset($secondary_links)) : ?>
-          <?php print theme('links', $secondary_links, array('class' => 'links secondary-links')) ?>
-        <?php endif; ?>
-
+        <h1><a href="/"><img src="<?php echo $directory ?>/logo.gif" alt="N2e" /></a></h1>
+        
+        <?php print theme('links', $primary_links, array('id' => 'primary-links')) ?>
+        
+        <ul id="socialIcons">
+      		<li><a href="#"><img src="<?php echo $directory ?>/images/icn-facebook.gif" alt="Facebook"  /></a></li>
+        	<li><a href="#"><img src="<?php echo $directory ?>/images/icn-flickr.gif" alt="Flickr"  /></a></li>
+        	<li><a href="#"><img src="<?php echo $directory ?>/images/icn-vimeo.gif" alt="Vimeo"  /></a></li>	
+        	<li><a href="#"><img src="<?php echo $directory ?>/images/icn-twitter.gif" alt="Twitter"  /></a></li>	
+        	<li><a href="#"><img src="<?php echo $directory ?>/images/icn-email.gif" alt="Email"  /></a></li>	
+        	<li><a href="#"><img src="<?php echo $directory ?>/images/icn-rss.gif" alt="RSS"  /></a></li>
+        </ul>
       </div> <!-- /header -->
-
-      <?php if ($left): ?>
-        <div id="sidebar-left" class="sidebar">
-          <?php if ($search_box): ?><div class="block block-theme"><?php print $search_box ?></div><?php endif; ?>
-          <?php print $left ?>
-        </div>
-      <?php endif; ?>
-
-      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
-          <?php print $breadcrumb; ?>
-          <?php if ($mission): print '<div id="mission">'. $mission .'</div>'; endif; ?>
-          <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
-          <?php if ($title): print '<h2'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h2>'; endif; ?>
-          <?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
-          <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
-          <?php if ($show_messages && $messages): print $messages; endif; ?>
-          <?php print $help; ?>
-          <div class="clear-block">
-            <?php print $content ?>
-          </div>
-          <?php print $feed_icons ?>
-          <div id="footer"><?php print $footer_message . $footer ?></div>
-      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+      
+      <div id="mainContent">
+        <div id="heroImage"></div>
+        <div id="rotatingContent">
+            <?php print $breadcrumb; ?>
+            <?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
+            <?php if ($title): print '<h2'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h2>'; endif; ?>
+            <?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
+            <?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
+            <?php if ($show_messages && $messages): print $messages; endif; ?>
+            <?php print $help; ?>
+            <div>
+              <?php print $content ?>
+            </div>
+            <?php print $feed_icons ?>
+        </div> <!-- /#rotatingContent -->
+      </div>
 
       <?php if ($right): ?>
         <div id="sidebar-right" class="sidebar">
@@ -85,9 +54,12 @@
           <?php print $right ?>
         </div>
       <?php endif; ?>
+      
+      <div id="footer">
+        <?php print $footer_message . $footer ?>
+      </div>
 
     </div> <!-- /container -->
-  </div>
 <!-- /layout -->
 
   <?php print $closure ?>
