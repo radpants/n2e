@@ -116,11 +116,12 @@ h1 {
 
 #rotatingContent {
   background: url(images/transparency.png) no-repeat;
-	height: 380px;
+	height: 320px;
 	margin: 0 0 0 550px;
 	padding: 30px;
 	position: absolute;
-  width: 380px;
+	overflow: hidden;
+  width: 320px;
 }
 
 #rotatingContent h2 {

@@ -31,18 +31,11 @@
         </ul>
       </div> <!-- /header -->
       
-      <div id="mainContent">
-				<?php print $breadcrumb; ?>
-				<?php if ($tabs): print '<div id="tabs-wrapper" class="clear-block">'; endif; ?>
-				<?php if ($title): print '<h2'. ($tabs ? ' class="with-tabs"' : '') .'>'. $title .'</h2>'; endif; ?>
-				<?php if ($tabs): print '<ul class="tabs primary">'. $tabs .'</ul></div>'; endif; ?>
-				<?php if ($tabs2): print '<ul class="tabs secondary">'. $tabs2 .'</ul>'; endif; ?>
-				<?php if ($show_messages && $messages): print $messages; endif; ?>
-				<?php print $help; ?>
-				<div>
-					<?php print $content ?>
-				</div>
-				<?php print $feed_icons ?>
+      <div id="mainContent">      
+				<div id="heroImage"></div>
+				<div id="rotatingContent">
+						<?php print $content ?>
+				</div> <!-- /#rotatingContent -->
       </div>
 
       <?php if ($right): ?>
