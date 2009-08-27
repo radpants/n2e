@@ -8,23 +8,43 @@ body {
 	font: .9em/1.2em Calibri, Verdana, Geneva, sans-serif;
 }
 
+p {
+	margin-top: 15px;
+	font-size: 18px;
+	color: #444;
+	line-height: 25px;
+}
+
 a:link,
 a:visited {
-	color: #333;
+	color: #0083a9;
 	text-decoration: none;
 }
 
-	a:hover,
-	a:active {
-		color: #999;
-		text-decoration: none;
-	}
+  a:visited { color: #007da1; }
+
+a:hover,
+a:active {
+	color: #999;
+	text-decoration: underline;
+}
+
+h2,
+h2 a:link,
+h2 a:visited {
+	color: #444;
+  font-family: Nevis;
+	font-size: 40px;
+	line-height: 40px;
+	text-shadow: 1px 1px 1px #555;
+	text-transform: uppercase;
+}
 
 #container {
-	width: 900px;
 	margin: 0 auto 0 auto;
 	position: relative;
 	padding: 10px 0 0 0;
+	width: 1000px;
 }
 
 .clear {
@@ -37,13 +57,14 @@ a:visited {
 ---------------------------------------*/
 
 #header {
-	padding: 20px 16px 28px 20px;
+	margin: 0 16px 28px 20px;
+	padding-top: 56px;
 	position: relative;
 }
 
 h1 {
 	height: 56px;
-	margin-top: 56px;
+	margin-left: 76px;
 	width: 70px;
 }
 
@@ -53,15 +74,13 @@ h1 {
 	right: 16px;
 }
 
-	#primary-links li {
-		display: inline;
-		font-size: 17px;
-	}
+	#primary-links li { display: inline; }
 	
 		#primary-links li a { 	
 			color: #888;
 			display: block;
 			float: left; 
+  		font-size: 17px;
 			margin-left: 25px;
 			min-width: 54px; 
 			padding-top: 54px;
@@ -99,63 +118,33 @@ h1 {
 ---------------------------------------*/
 
 #mainContent {
-  float: left;
 	height: auto;
 	position: relative;
-	width: 900px;
+	width: 1000px;
 }
 
 #heroImage {
 	background: url(images/hero.jpg) top center no-repeat;
-	border-top: 1px solid #111;
-	border-bottom: 1px solid #111;	
-	height: 630px;
-	position: absolute;
-	width: 900px;
+	border: 1px solid #111;	
+	height: 553px;
+	position: relative;
+	width: 998px;
 }
 
 #rotatingContent {
-  background: url(images/transparency.png) no-repeat;
-	height: 320px;
-	margin: 0 0 0 550px;
+  background: url(images/transparency.png);
+  -webkit-box-shadow: 1px 1px 10px #555;
+  -moz-box-shadow: 1px 1px 10px #555;
 	padding: 30px;
 	position: absolute;
-	overflow: hidden;
-  width: 320px;
+	right: 90px;
+	top: 55px;
+	width: 400px;
 }
-
-#rotatingContent h2 {
-	font-size: 40px;
-	line-height: 40px;
-	color: #444;
-}
-
-#rotatingContent p {
-	margin-top: 15px;
-	font-size: 18px;
-	color: #444;
-	line-height: 25px;
-}
-
-#rotatingContent a:link {
-	color: #007da1;
-	font-size: 20px;
-}
-
-#rotatingContent a:visited {
-	color: #007da1;
-	font-size: 20px;
-}
-
-#rotatingContent a:hover {
-	color: #999;
-	font-size: 20px;
-}
-
-#rotatingContent a:active {
-	color: #999;
-	font-size: 20px;
-}
+  
+  #rotatingContent ul { margin: 0; padding: 12px 0 0 0; }
+  
+  #rotatingContent ul li a { font-size: 22px; margin: 0; padding: 0; }
 
 /* end of mainContent - rotatingContent */
 
@@ -165,12 +154,11 @@ h1 {
 /* footer - socialIcons - legal */
 
 #footer {
-  float: left;
-	width: 900px;
-	height: 90px;
-	margin-top: 55px;
-	padding-top: 5px;
 	background-color: #999;
+	height: 90px;
+	margin: 0 auto;
+	padding-top: 5px;
+	width: 1000px;
 }
 
 #legal {

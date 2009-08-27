@@ -32,10 +32,12 @@
       </div> <!-- /header -->
       
       <div id="mainContent">      
-				<div id="heroImage"></div>
-				<div id="rotatingContent">
-						<?php print $content ?>
-				</div> <!-- /#rotatingContent -->
+				<div id="heroImage">
+				  <div id="rotatingContent">
+  			    <h2><?php print $title ?></h2>
+  					<?php print $content ?>
+  				</div> <!-- /#rotatingContent -->				
+				</div>
       </div>
 
       <?php if ($right): ?>
