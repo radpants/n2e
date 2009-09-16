@@ -32,9 +32,7 @@ function phptemplate_body_class($left, $right) {
  * @return a string containing the breadcrumb output.
  */
 function phptemplate_breadcrumb($breadcrumb) {
-  if (!empty($breadcrumb)) {
     return '<div class="breadcrumb">'. implode(' › ', $breadcrumb) .'</div>';
-  }
 }
 
 /**
@@ -100,3 +98,23 @@ function phptemplate_get_ie_styles() {
 
   return $iecss;
 }
+
+
+/**
+* Displays file attachments as list items instead of in table
+*/
+function phptemplate_upload_attachments($files) {
+  $rows = array();
+  foreach ($files as $file) {
+    if ($file->list) {
+      $href = $file->fid ? file_create_url($file->filepath) : url(file_create_filename($file->filename, file_create_path()));
+      $text = $file->description ? $file->description : $file->filename;
+      $rows[] = array(l($text, $href), format_size($file->filesize));
+    }
+  }
+  foreach($rows as $row){
+   $listfiles .= '<li>'.$row[0].' <em>('.$row[1].')</em>'.'</li>';
+  }
+  return '<ul>'.$listfiles.'</ul>';
+}
+?>

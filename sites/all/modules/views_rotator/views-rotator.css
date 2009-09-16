@@ -1,0 +1,29 @@
+div.views-rotator-item,
+div#views-rotator {
+  margin: 0;
+  padding: 0;
+}
+
+a.views-rotator-prev,
+a.views-rotator-next {
+	bottom: 22px;
+  height: 0;
+}
+
+a.views-rotator-prev {
+  background: url(images/prev.png) left 50% no-repeat;
+  left: 30px;
+}
+
+a.views-rotator-next {
+  background: url(images/next.png) right 50% no-repeat;
+  right: 28px;
+}
+
+a.views-rotator-prev-hover,
+a.views-rotator-next-hover {
+  height: 35px;
+  width: 48px;
+  position: absolute;
+  z-index: 1000;
+}

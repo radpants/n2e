@@ -7,6 +7,7 @@ engine = phptemplate
 
 regions[right] = Right sidebar
 regions[content] = Content
+regions[slider] = Slider
 regions[header] = Header
 regions[footer] = Footer
 
